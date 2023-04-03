@@ -1,0 +1,314 @@
+\documentclass[11pt]{article}
+% Comments in LaTeX
+% \documentclass[11pt]{article} defines the type of document
+% {} compulsory argument
+% [] optional argument
+% \documentclass{beamer} or any other class can be used
+
+\parindent 0px
+\pagestyle{empty} % turn off page numbering
+\usepackage{amsmath, amsfonts, amssymb} % for math utilities
+\usepackage{float} % for table utilities
+\usepackage{enumerate} % for List Utilities
+\usepackage{hyperref} % for hyper link utilities
+
+% The document is enclosed within 
+% \begin{document} and
+% \end{document}
+
+% Document Details
+\title{LaTeX Tutorial}
+\author{Rituparna Warwatkar}
+\date{\today}
+% maketitle is required to actually render the details
+
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+Hello !
+This is My First \LaTeX\ document
+% \LaTeX\ is used to render the latex logo
+\\[1cm]
+
+Offline Infrastructure \\
+% \\ is used for line breaks
+% and hard return is used for new paragraph
+% Indentation can be turned off using 
+% \parindent 0px in the preamble
+Latex distro + Code Editor \\
+Eg. MiKTeX + TeXmaker \\
+In preferences turn on \\
+Built in viewer and Embeded \\ 
+and \\
+Launch clean tool when exiting 
+\\[1cm]
+
+% Writing maths,
+% use $  $ for inline mode 
+% or $$  $$ for display/block mode
+A rectangle has sides of length $(x+1)$ and $(x+3)$. \\
+% using ^ directly throws error
+The function $A(x) = x^2+4x+3$ gives the area.\\
+
+To keep the entire equation on single line enclose it within ${A(x) = x^2+4x+3}$. \\
+
+% \hline % horizontal rule
+\rule{\textwidth}{0.5pt} 
+
+\vspace{0.5cm} % Insert a vertical spacing
+Common Math Notations
+
+\vspace{0.5cm} 
+Superscripts \\
+% 2x^3 -> error
+$2x^3$
+
+$$ 2x^3 $$
+Difference between
+$$ 2x^34 $$ and 
+$$ 2x^{34} $$
+
+Other examples
+$$ 2x^{3x+4} $$
+$$ 2x^{3x^{2}+4} $$
+
+Subscripts 
+
+$$ x_1 $$
+Difference between
+$$ x_12 $$
+and
+$$ x_{12} $$
+
+$$ x_{1_2} $$
+$$ a_0, a_1, a_2,\ \ldots\ , a_{100} $$
+
+Greek Letters
+$$ \pi $$
+$$ \Pi $$
+$$ \alpha $$
+$$ \theta $$
+$$ \Theta $$
+
+Trigonometric Functions
+$$ y = sin x $$
+$$ y = \sin x $$
+$$ y = \cos x $$
+$$ y = \tan x $$
+$$ y = \sin^{-1} x $$
+$$ y = \arcsin x $$
+
+Logarithmic Functions
+$$ y = log x $$ 
+or
+$$ y = \log x $$
+$$ y = \log {(2x+1)} $$
+$$ y = \log_5 {(2^x+1)} $$
+$$ y = \ln x $$
+$$ y = \ln {(2x+5)} $$
+
+Roots
+$$ \sqrt{2} $$
+$$ \sqrt{2x+1} $$
+$$ \sqrt[3]{3x^2} $$
+$$ \sqrt{1+\sqrt{2x^3}} $$
+
+Fractions
+
+$$ \frac{1}{2} $$
+
+About $\frac{2}{3}$ of the glass is full.
+\\[0.5cm]
+About $\displaystyle\frac{2}{3}$ of the glass is full.
+\\[0.25cm]
+% to use \dfrac import packages amsmath, amssymbol, amsfont
+About $\dfrac{2}{3}$ of the glass is full.
+
+$$ \frac{\sqrt{x+1}}{\sqrt{x+2}} $$
+
+$$ \frac{1}{1+\frac{1}{x}} $$
+
+\vspace{1cm}
+Brackets
+
+The distributive property of addition states that $a(b+c)=ab+ac$ for $a, b, c \in \mathbb{R}$
+
+The equivalent class of $ a $ is $[a]$
+
+The set $ A $ is $\{1, 2, 3\}$ and not ${1, 2, 3}$.
+
+The movie ticket costs \$10.99 and the \$ sign needs to be escaped.
+
+$$ (\frac{1}{x^2-1}) $$
+The () are not tall enough.
+
+$$ 2\left( \frac{1}{1+\frac{1}{\sqrt{x}}}  \right) $$
+$$ 2\left[ \frac{1}{1+\frac{1}{\sqrt{x}}}  \right] $$
+Curly braces need to be escaped 
+$$ 2\left\{ \frac{1}{1+\frac{1}{\sqrt{x}}}  \right\} $$
+
+For angular brackets
+$$ 2\left\langle \frac{1}{1+\frac{1}{\sqrt{x}}}  \right\rangle $$
+For mod
+$$ 2\left| \frac{1}{1+\frac{1}{\sqrt{x}}}  \right| $$
+
+% left and right need to be used together, to omit left side
+% use \left.
+To use left or right only on one side
+$$  y =  \left.\frac{dy}{dx}\right|_{x=1} $$
+
+TABLES
+\\[12pt]
+\begin{tabular}{c|c|c} % centered align
+    x & 1 & 2 \\
+    f(x) & 10 & 20
+\end{tabular}
+
+\rule{\textwidth}{0.5pt}
+\\[12pt]
+\begin{tabular}{l|l|l} % left aligned
+    x & 1 & 2 \\
+    f(x) & 10 & 20
+\end{tabular}
+
+\rule{\textwidth}{0.5pt}
+\\[12pt]
+\begin{tabular}{c||c|c} % centered align
+    x & 1 & 2 \\ \hline
+    f(x) & 10 & 20
+\end{tabular}
+
+% Tables in latex are auto fitted by the compiler
+
+\vspace{5cm}
+
+\begin{table}[H]
+    \centering
+    \def\arraystretch{1.5}
+    \begin{tabular}{c|c|c|c}
+        $x$ & 1 & 2 & 3 \\
+        $f(x)$ & 11 & 12 & 13
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+For long text in a cell \\
+\begin{tabular}{c|p{8cm}}
+   number & 1 \\
+   text & HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead HueHue lmao dead
+\end{tabular}
+
+\vspace{4cm}
+Arrays
+% can also be done with eqnarray
+% but
+\begin{align}
+    5x^2 \, \text{text in math mode} \\
+    % \, forces a space
+    5x^2 - 9 = x + 3 \\
+    5x^ - x - 12 = 0
+\end{align}
+
+
+\begin{align}
+    5x^2 \, \text{text in math mode} \\
+    % \, forces a space
+    5x^2 - 9 &= x + 3 \\
+    % &= for aligning over = sign
+    5x^ - x - 12 &= 0
+\end{align}
+
+\begin{align*}
+    % To not number the equations
+    5x^2 \, \text{text in math mode} \\
+    % \, forces a space
+    5x^2 - 9 &= x + 3 \\
+    5x^ - x - 12 &= 0
+\end{align*}
+
+\pagebreak
+Lists
+\begin{enumerate}
+    \item pencil
+    \item pen
+    \item calculator
+    \item noteboo
+        \begin{enumerate}
+            \item notes
+            \item Homework
+            \begin{enumerate}
+                \item Maths
+                \item Science
+            \end{enumerate}
+        \end{enumerate}
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{enumerate}[A.]
+    \item One
+    \item Two
+\end{enumerate}
+
+To not display bullet or use custom 
+
+\begin{enumerate}[A.]
+    \item [a] One
+    \item [] Two
+    \item [zee] Z
+\end{enumerate}
+
+Text and document formatting
+
+This is \textit{italicized}\\
+This is \textbf{bold face}\\
+This is \textsc{small caps}\\
+This is \texttt{typewriter text} or \texttt{monospace}
+
+Visit my website \url{https://rituparnawarwatkar.com}\\
+Or \href{https://rituparnawarwatkar.com}{click here}\\[2cm] 
+
+Font Sizes\\
+Please excuse my dear aunt sally\\
+Please excuse \begin{large}my dear aunt sally\end{large}\\
+Please excuse \begin{Large}my dear aunt sally\end{Large}\\
+Please excuse \begin{huge}my dear aunt sally\end{huge}\\
+Please excuse \begin{Huge}my dear aunt sally\end{Huge}\\
+Please excuse my dear aunt sally\\
+Please excuse \begin{normalsize}my dear aunt sally\end{normalsize}\\
+Please excuse \begin{small}my dear aunt sally\end{small}\\
+Please excuse \begin{scriptsize}my dear aunt sally\end{scriptsize}\\
+Please excuse \begin{tiny}my dear aunt sally\end{tiny}\\[4cm]
+
+Text Alignment\\
+
+\begin{center}
+    Centered Aligned Text
+\end{center}
+
+\begin{flushleft}
+    Left Aligned text
+\end{flushleft}
+
+\begin{flushright}
+    Right Aligned text
+\end{flushright}
+
+\pagebreak
+
+Sections and Subsections and subsubsections
+
+\section{Section One}
+    \subsection{Subsection One.One}
+    \subsection{Subsection One.Two}
+\section{Section Two}
+    \subsection{Subsection Two.One}
+    \subsection{Subsection Two.Two}
+        \subsubsection{Subsubsection Two.Two.One}
+
+% \tableofcontents at the begin creates the Index
+        
+\end{document}
